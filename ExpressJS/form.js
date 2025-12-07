@@ -46,34 +46,60 @@
 
 
 // GET Request with Query Params and URL Params
-const express = require("express");
-const app = express();
-const port = 5000;
+// const express = require("express");
+// const app = express();
+// const port = 5000;
 
-// Simple GET
-app.get("/info", (req, res) => {
-  res.send("Server is running.");
+// // Simple GET
+// app.get("/info", (req, res) => {
+//   res.send("Server is running.");
+// });
+
+// // GET with Query Params
+// app.get("/user", (req, res) => {
+//   const { name, age } = req.query;
+
+//   res.send(
+//     `Query Received\nName: ${name}\nAge: ${age}`
+//   );
+// });
+
+// // GET with URL Params
+// app.get("/product/:id", (req, res) => {
+//   const productId = req.params.id;
+
+//   res.send(
+//     `Product ID Received: ${productId}`
+//   );
+// });
+
+// // Start server
+// app.listen(port, () => {
+//   console.log(`Server running at http://localhost:${port}`);
+// });
+
+// Advance 
+
+
+const express=require("express");
+const app=express();
+
+app.get("/user/:id",(req,res)=>{
+  const userId=req.params.id;
+  res.send(`user ID is :${userId}`);
 });
 
-// GET with Query Params
-app.get("/user", (req, res) => {
-  const { name, age } = req.query;
-
-  res.send(
-    `Query Received\nName: ${name}\nAge: ${age}`
-  );
+app.listen(5000,()=>{
+  console.log("server running on http://localhost:5000");
 });
 
-// GET with URL Params
-app.get("/product/:id", (req, res) => {
-  const productId = req.params.id;
+//Middleware in ExpressJS
+//middleware =a function that runs between request and response
+//used for:logging,authentication,validation,parsing,error,etc.
 
-  res.send(
-    `Product ID Received: ${productId}`
-  );
-});
+//Types of Middleware
+//1.Application Level middleware
+//2.custom middleware
+//3.Routr-level & App-level Middleware
+//4.Error-hamdling middleware
 
-// Start server
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});
