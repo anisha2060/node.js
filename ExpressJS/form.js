@@ -81,21 +81,21 @@
 // Advance 
 
 
-const express=require("express");
-const app=express();
+// const express=require("express");
+// const app=express();
 
-app.get("/user/:id",(req,res)=>{
-  const userId=req.params.id;
-  res.send(`user ID is :${userId}`);
-});
+// app.get("/user/:id",(req,res)=>{
+//   const userId=req.params.id;
+//   res.send(`user ID is :${userId}`);
+// });
 
-app.listen(5000,()=>{
-  console.log("server running on http://localhost:5000");
-});
+// app.listen(5000,()=>{
+//   console.log("server running on http://localhost:5000");
+// });
 
 //Middleware in ExpressJS
 //middleware =a function that runs between request and response
-//used for:logging,authentication,validation,parsing,error,etc.
+//used for:logging,authentication,validation,passing,error,etc.
 
 //Types of Middleware
 //1.Application Level middleware
@@ -103,3 +103,15 @@ app.listen(5000,()=>{
 //3.Routr-level & App-level Middleware
 //4.Error-hamdling middleware
 
+// Scope 
+
+// function test(){
+// let a=10;
+// const b=20;
+// }
+// test();
+// console.log(a);
+// console.log(b);
+
+// DOM (document object model)
+// virtual DOM (replace)
