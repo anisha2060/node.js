@@ -115,3 +115,19 @@
 
 // DOM (document object model)
 // virtual DOM (replace)
+ 
+const express = require("express");
+const app = express();
+
+app.use((req,res,next)=>{
+    console.log("Middleware works!");
+    next();
+});
+
+app.get("/",(req, res)=>{
+    res.send("Hello From Express!")
+});
+
+app.listen(5000,()=>{
+    console.log("Server started at https://localhost:5000")
+});
