@@ -129,7 +129,7 @@
 // });
 
 // app.listen(5000,()=>{
-//     console.log("Server started at https://localhost:5000")
+//     console.log("Server started at http://localhost:5000")
 // });
 
 // const express=require ("express");
@@ -149,3 +149,23 @@
 // app.listen(5000,()=>{
 //     console.log("server started at https://localhost:5000");
 // });
+
+
+// Error Handling Middleware
+
+const express=require("express");
+const app= express();
+
+app.get("/",(req,res,next)=>{
+    const error=new Error("something went wrong");
+    next(error);
+});
+
+app.use((err,req,res,next)=>{
+    console.log("Error:", err.message);
+    res.send("Error occured");
+});
+
+app.listen(5000,()=>{
+    console.log("Server started http://localhost:5000");
+});
