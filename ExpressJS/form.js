@@ -101,7 +101,7 @@
 //1.Application Level middleware
 //2.custom middleware
 //3.Routr-level & App-level Middleware
-//4.Error-hamdling middleware
+//4.Error-handling middleware
 
 // Scope 
 
@@ -116,18 +116,36 @@
 // DOM (document object model)
 // virtual DOM (replace)
  
-const express = require("express");
-const app = express();
+// const express = require("express");
+// const app = express();
 
-app.use((req,res,next)=>{
-    console.log("Middleware works!");
-    next();
-});
+// app.use((req,res,next)=>{
+//     console.log("Middleware works!");
+//     next();
+// });
 
-app.get("/",(req, res)=>{
-    res.send("Hello From Express!")
-});
+// app.get("/",(req, res)=>{
+//     res.send("Hello From Express!")
+// });
 
-app.listen(5000,()=>{
-    console.log("Server started at https://localhost:5000")
-});
+// app.listen(5000,()=>{
+//     console.log("Server started at https://localhost:5000")
+// });
+
+// const express=require ("express");
+// const app= express();
+
+// function myMiddleware(req,res,next){
+//     console.log("This is my custom middleware");
+//     next();
+// }
+
+// app.use(myMiddleware);
+
+// app.get("/",(res,req)=>{
+//     res.send("Home Page");
+// });
+
+// app.listen(5000,()=>{
+//     console.log("server started at https://localhost:5000");
+// });
