@@ -116,8 +116,7 @@
 // DOM (document object model)
 // virtual DOM (replace)
  
-// simple middleware
-
+// simple Middleware
 // const express = require("express");
 // const app = express();
 
@@ -159,12 +158,14 @@
 // const app= express();
 
 // app.get("/",(req,res,next)=>{
-//     const error=new Error("something went wrong");
-//     next(error);
+//     // const error=new Error("something went wrong");
+//     next("something went wrong");
+//     // next(error);
 // });
 
 // app.use((err,req,res,next)=>{
-//     console.log("Error:", err.message);
+//     // console.log("Error:", err.message);
+//     console.log("Error:", err);
 //     res.send("Error occured");
 // });
 
@@ -172,3 +173,25 @@
 //     console.log("Server started http://localhost:5000");
 // });
 
+// Async/Await Middleware
+// Async/Await middleware is used to wait for a task to finish before moving to the next step.
+
+// Example of Async/Await middleware
+
+const express = require("express");
+const app = express();
+
+app.use(async (req,res,next)=>{
+    console.log("Middleware Started");
+    
+    await console.log("Waiting task done");
+    next();
+});
+
+app.get("/",(req,res)=>{
+    res.send("Hello BCA students");
+});
+
+app.listen(5000,()=>{
+    console.log("Server Started");
+});
