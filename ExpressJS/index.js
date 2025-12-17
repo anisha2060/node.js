@@ -1,10 +1,3 @@
-// What is Express.js?
-
-// A minimal and flexible Node.js framework used to build web servers and APIs.
-// It simplifies takes like routing, handaling requests, sending responses, and managing middleware.
-
-// Key Points
-
 // creating a basic express server
 
 // const express = require("express");
