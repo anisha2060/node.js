@@ -116,6 +116,8 @@
 // DOM (document object model)
 // virtual DOM (replace)
  
+// simple middleware
+
 // const express = require("express");
 // const app = express();
 
@@ -153,19 +155,20 @@
 
 // Error Handling Middleware
 
-const express=require("express");
-const app= express();
+// const express=require("express");
+// const app= express();
 
-app.get("/",(req,res,next)=>{
-    const error=new Error("something went wrong");
-    next(error);
-});
+// app.get("/",(req,res,next)=>{
+//     const error=new Error("something went wrong");
+//     next(error);
+// });
 
-app.use((err,req,res,next)=>{
-    console.log("Error:", err.message);
-    res.send("Error occured");
-});
+// app.use((err,req,res,next)=>{
+//     console.log("Error:", err.message);
+//     res.send("Error occured");
+// });
 
-app.listen(5000,()=>{
-    console.log("Server started http://localhost:5000");
-});
+// app.listen(5000,()=>{
+//     console.log("Server started http://localhost:5000");
+// });
+
