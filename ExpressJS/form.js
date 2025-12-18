@@ -178,20 +178,22 @@
 
 // Example of Async/Await middleware
 
-const express = require("express");
-const app = express();
+// const express = require("express");
+// const app = express();
 
-app.use(async (req,res,next)=>{
-    console.log("Middleware Started");
+// app.use(async (req,res,next)=>{
+//     console.log("Middleware Started");
     
-    await console.log("Waiting task done");
-    next();
-});
+//     await console.log("Waiting task done");
+//     next();
+// });
 
-app.get("/",(req,res)=>{
-    res.send("Hello BCA students");
-});
+// app.get("/",(req,res)=>{
+//     res.send("Hello BCA students");
+// });
 
-app.listen(5000,()=>{
-    console.log("Server Started");
-});
+// app.listen(5000,()=>{
+//     console.log("Server Started");
+// });
+
+
