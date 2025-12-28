@@ -1,16 +1,16 @@
-const fs = require ("fs");
-const path = require("path");
+// const fs = require ("fs");
+// const path = require("path");
 
-const fileName = "crud.txt";
+// const fileName = "crud.txt";
 
-const filePath = path.join(__dirname, fileName);
-console.log(filePath);
+// const filePath = path.join(__dirname, fileName);
+// console.log(filePath);
 
-fs.unlink(filePath, 
-    (err)=>{
-        if (err) console.error(err);
-        else console.log("Delete file");
-});
+// fs.unlink(filePath, 
+//     (err)=>{
+//         if (err) console.error(err);
+//         else console.log("Delete file");
+// });
 // fs.appendFile(filePath, "Hello prashansha", "utf-8",
 //     (err)=>{
 //         if (err) console.error(err);
